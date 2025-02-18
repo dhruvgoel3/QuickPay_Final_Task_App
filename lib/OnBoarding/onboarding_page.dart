@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quickpay_final_task/SignUp/signup_page.dart';
 
-class OnboardingPage extends StatelessWidget {
+class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
 
+  @override
+  State<OnboardingPage> createState() => _OnboardingPageState();
+}
+
+class _OnboardingPageState extends State<OnboardingPage> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -120,7 +126,9 @@ class OnboardingPage extends StatelessWidget {
             height: height * 0.03,
           ),
           InkWell(
-            // onTap: Get.to((co)=>Placeholder()),
+            onTap: () {
+              Get.to(SignupPage());
+            },
             child: Container(
               height: height * 0.067,
               width: width * 0.8,
