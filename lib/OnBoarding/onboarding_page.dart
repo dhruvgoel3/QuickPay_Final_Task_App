@@ -131,7 +131,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             },
             child: Container(
               height: height * 0.067,
-              width: width * 0.8,
+              width: width * 0.87,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15), color: Colors.black),
               child: Center(
