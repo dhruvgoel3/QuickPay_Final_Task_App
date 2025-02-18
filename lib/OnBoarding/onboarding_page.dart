@@ -11,45 +11,62 @@ class OnboardingPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-              color: Colors.black,
-              child: Image.asset(
-                "assets/WhatsApp_Image_2025-02-08_at_15.57.45-removebg-preview 1.png",
-                fit: BoxFit.cover,
-              )),
-          Column(
+          Stack(
             children: [
-              Text("Banking made"),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("faster"),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text("and"),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text("easier"),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Container(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 100,horizontal: 40),
+                    child: Image.asset(
 
-                children: [
-                  Text("with"),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text("QuickPay")
-                ],
+                      height: height*0.45,
+                      width: width*0.85,
+                      "assets/perse_image_origignal-removebg-preview.png",
+                    ),
+                  )),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 490,right: 75),
+                child: Column(
+                  children: [
+                    Text("Banking made",style: GoogleFonts.inter(fontSize: 30,fontWeight: FontWeight.w400),),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 37),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("faster",style: GoogleFonts.inter(fontSize: 30,fontWeight: FontWeight.w600),),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text("and",style: GoogleFonts.inter(fontSize: 30,fontWeight: FontWeight.w400),),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text("easier",style: GoogleFonts.inter(fontSize: 30,fontWeight: FontWeight.w600),),
+                        ],
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+
+                      children: [
+                        Text("with",style: GoogleFonts.inter(fontSize: 30,fontWeight: FontWeight.w400),),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text("QuickPay",style: GoogleFonts.inter(fontSize: 30,fontWeight: FontWeight.w600
+                        ),)
+                      ],
+                    ),
+                    SizedBox(height: 15,),
+                    Text("Pay smarter , not harder",style: GoogleFonts.inter(color:Colors.grey,fontSize: 16,fontWeight: FontWeight.w400),)
+                  ],
+                ),
               ),
-              Text("Pay smarter , not harder")
             ],
           ),
           SizedBox(
-            height: height * 0.16,
+            height: height * 0.01,
           ),
           // Row(
           //   children: [
