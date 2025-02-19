@@ -7,7 +7,7 @@ class TextFieldsTwo {
     required String Text,
     required bool tohide,
     required IconData icon,
-    required String image,
+    required Image image,
 
   }) {
     return Container(
@@ -22,7 +22,7 @@ class TextFieldsTwo {
             size: 22,
             color: Colors.grey,
           ),
-          suffix: Image.asset(image),
+          suffixIcon: image,
           hintText: Text,
           hintStyle: GoogleFonts.inter(
               fontSize: 14, fontWeight: FontWeight.w400, color: Colors.grey),
