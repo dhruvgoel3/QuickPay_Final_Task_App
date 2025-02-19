@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quickpay_final_task/Login/login_Page.dart';
 import 'package:quickpay_final_task/SignUp/textfields_page.dart';
 
 import '../Widgets/textfields.dart';
@@ -102,33 +103,61 @@ class _SignupPageState extends State<SignupPage> {
                             fontSize: 16))),
               ),
             ),
-            SizedBox(height: 8,),
+            SizedBox(
+              height: 8,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 26.0),
               child: Row(
                 children: [
-                Image.asset("assets/Line 10.png",color: Colors.grey,),
-                  SizedBox(width: 4,),
+                  Image.asset(
+                    "assets/Line 10.png",
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 4,
+                  ),
                   Text("or"),
-                  SizedBox(width: 4,),
-                  Image.asset("assets/Line 10.png",color: Colors.grey,),
-
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Image.asset(
+                    "assets/Line 10.png",
+                    color: Colors.grey,
+                  ),
                 ],
               ),
             ),
-            SizedBox(height: 10,),
-            Image.asset("assets/WhatsApp_Image_2025-02-02_at_00.13.42-removebg-preview 1.png"),
+            SizedBox(
+              height: 10,
+            ),
+            Image.asset(
+                "assets/WhatsApp_Image_2025-02-02_at_00.13.42-removebg-preview 1.png"),
             Padding(
               padding: const EdgeInsets.only(left: 65.0),
               child: Row(
                 children: [
-                  Text("Already have an account?",style: GoogleFonts.inter(fontSize: 15,fontWeight: FontWeight.w300,color: Colors.grey),),
-                  TextButton(onPressed: (){}, child: Text("Login",style: GoogleFonts.inter(fontSize: 15,fontWeight: FontWeight.w300,color: Colors.black),))
-
+                  Text(
+                    "Already have an account?",
+                    style: GoogleFonts.inter(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w300,
+                        color: Colors.grey),
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        Get.to(LoginPage());
+                      },
+                      child: Text(
+                        "Login",
+                        style: GoogleFonts.inter(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.black),
+                      ))
                 ],
               ),
             )
-
           ],
         ),
       ),

@@ -7,6 +7,7 @@ class TextFields {
     required String Text,
     required bool tohide,
     required IconData icon,
+
   }) {
     return Container(
       height: 54,
