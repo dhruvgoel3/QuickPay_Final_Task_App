@@ -12,8 +12,8 @@ class Cards {
     return Card(
       shadowColor: Colors.grey,
       child: Container(
-        height: 120,
-        width: 350,
+        height: 150,
+        width: 340,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
@@ -22,16 +22,20 @@ class Cards {
           children: [
             Row(
               children: [
-                Text(
-                  heading,
-                  style: GoogleFonts.inter(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                      color: Colors.black),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                  child: Text(
+                    heading,
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                        color: Colors.black),
+                  ),
                 ),
+                SizedBox(width: 90,),
                 Container(
-                  height: 20,
-                  width: 50 ,
+                  height: 22,
+                  width: 60 ,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30), color: Colors.black),
                   child: Center(
@@ -43,17 +47,43 @@ class Cards {
                 ),
               ],
             ),
+            SizedBox(height: 10,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
               children: [
                 Column(
                   children: [
                     image,
                     SizedBox(height: 5,),
-                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 12),),
-                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 12),),
-
+                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
                   ],
-                )
+                ),
+                Column(
+                  children: [
+                    image,
+                    SizedBox(height: 5,),
+                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                  ],
+                ),
+                Column(
+                  children: [
+                    image,
+                    SizedBox(height: 5,),
+                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                  ],
+                ),
+                Column(
+                  children: [
+                    image,
+                    SizedBox(height: 5,),
+                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                  ],
+                ),
               ],
             ),
           ],

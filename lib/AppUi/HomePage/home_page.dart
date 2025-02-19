@@ -86,9 +86,22 @@ class _HomePageState extends State<HomePage> {
           Cards.ContainerCard(
               heading: "Recharge & Pay Bills",
               ButtonHeading: "View All",
-              image: Image.asset("assets/mainUiAssets/mobile 1.png"),
+              image: Image.asset("assets/mobile 1.png"),
               text1: "Mobile",
-              text2: "Recharge")
+              text2: "Recharge"),
+          Cards.ContainerCard(
+              heading: "Electricity Bill",
+              ButtonHeading: "View All",
+              image: Image.asset("assets/mobile 1.png"),
+              text1: "Mobile",
+              text2: "Recharge"),
+          Cards.ContainerCard(
+              heading: "Recharge & Pay Bills",
+              ButtonHeading: "View All",
+              image: Image.asset("assets/mobile 1.png"),
+              text1: "Mobile",
+              text2: "Recharge"),
+
         ],
       ),
     );
