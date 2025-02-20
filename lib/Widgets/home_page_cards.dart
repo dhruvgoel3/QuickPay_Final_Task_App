@@ -5,9 +5,18 @@ class Cards {
   static ContainerCard({
     required heading,
     required ButtonHeading,
-    required Image image,
+    required Image image1,
+    required Image image2,
+    required Image image3,
+    required Image image4,
     required text1,
     required text2,
+    required text3,
+    required text4,
+    required text5,
+    required text6,
+    required text7,
+    required text8,
   }) {
     return Card(
       shadowColor: Colors.grey,
@@ -23,7 +32,8 @@ class Cards {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                   child: Text(
                     heading,
                     style: GoogleFonts.inter(
@@ -32,12 +42,15 @@ class Cards {
                         color: Colors.black),
                   ),
                 ),
-                SizedBox(width: 90,),
+                SizedBox(
+                  width: 20,
+                ),
                 Container(
                   height: 22,
-                  width: 60 ,
+                  width: 60,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30), color: Colors.black),
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.black),
                   child: Center(
                       child: Text("View All",
                           style: GoogleFonts.inter(
@@ -47,41 +60,98 @@ class Cards {
                 ),
               ],
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
               children: [
                 Column(
                   children: [
-                    image,
-                    SizedBox(height: 5,),
-                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
-                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    image1,
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      text1,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
+                    Text(
+                      text2,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
                   ],
                 ),
                 Column(
                   children: [
-                    image,
-                    SizedBox(height: 5,),
-                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
-                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    image2,
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      text1,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
+                    Text(
+                      text2,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
                   ],
                 ),
                 Column(
                   children: [
-                    image,
-                    SizedBox(height: 5,),
-                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
-                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    image3,
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      text1,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
+                    Text(
+                      text2,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
                   ],
                 ),
                 Column(
                   children: [
-                    image,
-                    SizedBox(height: 5,),
-                    Text(text1,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
-                    Text(text2,style: GoogleFonts.inter(color:Colors.grey,fontWeight: FontWeight.w400,fontSize: 13),),
+                    image4,
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      text1,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
+                    Text(
+                      text2,
+                      style: GoogleFonts.inter(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    ),
                   ],
                 ),
               ],
