@@ -95,14 +95,14 @@ class Cards {
                       height: 5,
                     ),
                     Text(
-                      text1,
+                      text3,
                       style: GoogleFonts.inter(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
                           fontSize: 13),
                     ),
                     Text(
-                      text2,
+                      text4,
                       style: GoogleFonts.inter(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
@@ -117,14 +117,14 @@ class Cards {
                       height: 5,
                     ),
                     Text(
-                      text1,
+                      text5,
                       style: GoogleFonts.inter(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
                           fontSize: 13),
                     ),
                     Text(
-                      text2,
+                      text6,
                       style: GoogleFonts.inter(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
@@ -139,14 +139,14 @@ class Cards {
                       height: 5,
                     ),
                     Text(
-                      text1,
+                      text7,
                       style: GoogleFonts.inter(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
                           fontSize: 13),
                     ),
                     Text(
-                      text2,
+                      text8,
                       style: GoogleFonts.inter(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
