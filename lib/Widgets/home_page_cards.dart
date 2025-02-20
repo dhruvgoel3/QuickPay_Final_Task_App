@@ -19,9 +19,17 @@ class Cards {
     required text8,
   }) {
     return Card(
-      shadowColor: Colors.grey,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15), // Rounded corners
+        side: BorderSide(
+          color: Colors.grey, // Border color
+          width: 0.2, // Border width
+        ),
+      ),
+      elevation: 3.5,
+      shadowColor: Colors.white,
       child: Container(
-        height: 150,
+        height: 145,
         width: 340,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -33,7 +41,7 @@ class Cards {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      const EdgeInsets.symmetric(horizontal: 13, vertical: 12),
                   child: Text(
                     heading,
                     style: GoogleFonts.inter(
@@ -61,7 +69,7 @@ class Cards {
               ],
             ),
             SizedBox(
-              height: 10,
+              height: 15,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

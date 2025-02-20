@@ -45,25 +45,25 @@ class _BottomBarState extends State<BottomBar> {
                     "assets/home (1) 2.png",
                     height: 25,
                   ),
-                  label: ""),
+                  label: "Home"),
               BottomNavigationBarItem(
                   icon: Image.asset(
                     "assets/history (1) 2.png",
                     height: 25,
                   ),
-                  label: ""),
+                  label: "History"),
               BottomNavigationBarItem(
                   icon: Image.asset(
                     "assets/credit-card 2.png",
                     height: 25,
                   ),
-                  label: ""),
+                  label: "Cards"),
               BottomNavigationBarItem(
                   icon: Image.asset(
                     "assets/user 2.png",
                     height: 25,
                   ),
-                  label: ""),
+                  label: "Profile"),
             ]),
       ),
       body: IndexedStack(
