@@ -15,107 +15,205 @@ class _HistoryPageState extends State<HistoryPage> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
-        children: [
-          Stack(
-            children: [
-              Image.asset("assets/Card 2.png"),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: width * 0.1, vertical: height * 0.052),
-                child: Row(
-                  children: [
-                    Text(
-                      "Billing History",
-                      style: GoogleFonts.inter(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white),
-                    ),
-                    SizedBox(
-                      width: width * 0.29,
-                    ),
-                    Container(
-                      height: 20,
-                      width: 70,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.white),
-                      child: Center(
-                          child: Text("feb 2025",
-                              style: GoogleFonts.inter(
-                                  color: Colors.lightBlue,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 12))),
-                    ),
-                  ],
-                ),
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Image.asset("assets/Card 2.png"),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: width * 0.57, top: 13),
+              child: Text(
+                "Transactions",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: 10.0, vertical: height * 0.17),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 20.0),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Package Cost",
-                            style: GoogleFonts.inter(color: Colors.white),
-                          ),
-                          SizedBox(
-                            height: 1,
-                          ),
-                          Text(
-                            "#77",
-                            style: GoogleFonts.inter(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 15),
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 25,
-                    ),
-                    Image.asset("assets/Line 19.png"),
-                    SizedBox(
-                      width: 25,
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          "#50",
-                          style: GoogleFonts.inter(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15),
-                        ),
-                      ],
-                    ),
-                    Image.asset("assets/Line 19.png"),
-                    SizedBox(
-                      width: 25,
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          "#24",
-                          style: GoogleFonts.inter(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            ListTile(
+              leading: Image.asset("assets/netflix 1.png"),
+              title: Text(
+                "Netflix",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15),
+              ),
+              trailing: Text(
+                "#17.99",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
+              subtitle: Text(
+                "Entertainment",
+                style: GoogleFonts.inter(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12),
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              color: Colors.grey.shade300,
+            ),
+            ListTile(
+              leading: Image.asset(
+                  "assets/WhatsApp_Image_2025-02-08_at_17.14.16-removebg-preview 1.png"),
+              title: Text(
+                "Spotify",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15),
+              ),
+              trailing: Text(
+                "#14.90",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
+              subtitle: Text(
+                "Music",
+                style: GoogleFonts.inter(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12),
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              color: Colors.grey.shade300,
+            ),
+            ListTile(
+              leading: Image.asset(
+                  "assets/WhatsApp_Image_2025-02-08_at_17.14.16__2_-removebg-preview 1.png"),
+              title: Text(
+                "Figma",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15),
+              ),
+              trailing: Text(
+                "#52.70",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
+              subtitle: Text(
+                "Design Tool",
+                style: GoogleFonts.inter(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12),
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              color: Colors.grey.shade300,
+            ),
+            ListTile(
+              leading: Image.asset(
+                "assets/yt_music-removebg-preview.png",
+                width: 20,
+              ),
+              title: Text(
+                "Youtube music",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15),
+              ),
+              trailing: Text(
+                "#17.99",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
+              subtitle: Text(
+                "Music",
+                style: GoogleFonts.inter(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12),
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              color: Colors.grey.shade300,
+            ),
+            ListTile(
+              leading: Image.asset(
+                  "assets/WhatsApp_Image_2025-02-08_at_17.15.20-removebg-preview 1.png"),
+              title: Text(
+                "PS plus subscription",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15),
+              ),
+              trailing: Text(
+                "#44.87",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
+              subtitle: Text(
+                "Gaming",
+                style: GoogleFonts.inter(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12),
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              color: Colors.grey.shade300,
+            ),
+            ListTile(
+              leading: Image.asset(
+                  "assets/WhatsApp_Image_2025-02-08_at_17.34.01-removebg-preview 1 (1).png"),
+              title: Text(
+                "App Store",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15),
+              ),
+              trailing: Text(
+                "#10",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
+              subtitle: Text(
+                "Download Apps",
+                style: GoogleFonts.inter(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12),
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              color: Colors.grey.shade300,
+            ),
+          ],
+        ),
       ),
     );
   }
