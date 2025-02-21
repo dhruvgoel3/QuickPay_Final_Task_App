@@ -51,16 +51,68 @@ class _HistoryPageState extends State<HistoryPage> {
                   ],
                 ),
               ),
-              Row(
-                children: [
-                  Column(children: [
-                    Text("Package Cost",style: GoogleFonts.inter(color: Colors.white),),
-                    Text("#77")
-                  ],)
-
-                ],
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: 10.0, vertical: height * 0.17),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 20.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Package Cost",
+                            style: GoogleFonts.inter(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 1,
+                          ),
+                          Text(
+                            "#77",
+                            style: GoogleFonts.inter(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Image.asset("assets/Line 19.png"),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "#50",
+                          style: GoogleFonts.inter(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15),
+                        ),
+                      ],
+                    ),
+                    Image.asset("assets/Line 19.png"),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "#24",
+                          style: GoogleFonts.inter(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               )
-
             ],
           ),
         ],
