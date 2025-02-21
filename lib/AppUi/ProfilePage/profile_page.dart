@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quickpay_final_task/AppUi/ProfilePage/profile_row_page.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -14,61 +16,11 @@ class _ProfilePageState extends State<ProfilePage> {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(children: [
-        Row(
+      body: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.only(top: height * 0.08, left: width * 0.06),
-              child: Image.asset("assets/Ellipse 7.png"),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20.0, top: height * 0.08),
-              child: Column(
-                children: [
-                  Text(
-                    "Hello DG",
-                    style: GoogleFonts.inter(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 24),
-                  ),
-                  Text(
-                    "0000DGYZ7",
-                    style: GoogleFonts.inter(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              width: width * 0.2,
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: height * 0.08),
-              child: Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(1), // Shadow color
-                      // Spread of shadow
-                    ),
-                  ],
-                ),
-                child: CircleAvatar(
-                  radius: 28,
-                  backgroundColor: Colors.white,
-                  child: Image.asset(
-                    "assets/WhatsApp_Image_2025-02-08_at_12.08.56-removebg-preview 3.png",
-                  ),
-                ),
-              ),
-            )
-          ],
-        ),
-      ]),
+            ProfileRowPage(),
+          ]
+      ),
     );
   }
 }
