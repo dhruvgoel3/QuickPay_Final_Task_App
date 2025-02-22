@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class ProfileRowPage extends StatelessWidget {
   const ProfileRowPage({super.key});
 
@@ -68,57 +69,118 @@ class ProfileRowPage extends StatelessWidget {
             )
           ],
         ),
-        Text(
-          "Total Balance",
-          style: GoogleFonts.inter(
-              color: Colors.grey,
-              fontWeight: FontWeight.w400,
-              fontSize: 14),
+        SizedBox(height: height * 0.02),
+        Padding(
+          padding: EdgeInsets.only(right: width * 0.47),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Total Balance",
+                style: GoogleFonts.inter(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14.5),
+              ),
+              SizedBox(height: height * 0.003),
+              Text(
+                "#80,0098.09",
+                style: GoogleFonts.inter(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 24),
+              ),
+            ],
+          ),
         ),
-        Text(
-          "#80,0098.09",
-          style: GoogleFonts.inter(
-              color: Colors.black,
-              fontWeight: FontWeight.w600,
-              fontSize: 24),
-        ),
+        SizedBox(height: height * 0.02),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              height: height*0.036,
-              width: width*0.3,
-              decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(20)),
-              child: Center(child: Text("+ Add Money",style: GoogleFonts.inter(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 13),)),
+              height: height * 0.037,
+              width: width * 0.3,
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black, blurRadius: 1, spreadRadius: 0.1)
+                  ],
+                  borderRadius: BorderRadius.circular(18)),
+              child: Center(
+                  child: Text(
+                "+ Add Money",
+                style: GoogleFonts.inter(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 13),
+              )),
             ),
             Container(
-              height: height*0.03,
-              width: width*0.26,
-              decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(20),border: Border.all(color: Colors.black)),
-              child:  Row(
-                children: [
-                  Icon(Icons.send,color: Colors.grey,size: 15,),
-                  SizedBox(width: 3,),
-                  Center(child: Text("Send",style: GoogleFonts.inter(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 13),)),
-                ],
+              height: height * 0.037,
+              width: width * 0.228,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(color: Colors.grey)),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 14.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.send,
+                      color: Colors.grey,
+                      size: 15,
+                    ),
+                    SizedBox(
+                      width: 3,
+                    ),
+                    Center(
+                        child: Text(
+                      "Send",
+                      style: GoogleFonts.inter(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    )),
+                  ],
+                ),
               ),
             ),
             Container(
-              height: height*0.03,
-              width: width*0.26,
-              decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(20)),
-              child: Row(
-                children: [
-                  Icon(Icons.vertical_align_bottom_outlined,color: Colors.grey,size: 15,),
-                  SizedBox(width: 3,),
-                  Center(child: Text("Request",style: GoogleFonts.inter(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 13),)),
-                ],
+              height: height * 0.037,
+              width: width * 0.27,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(color: Colors.grey)),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 14.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.file_download_outlined,
+                      color: Colors.grey,
+                      size: 15,
+                    ),
+                    SizedBox(
+                      width: 3,
+                    ),
+                    Center(
+                        child: Text(
+                      "Request",
+                      style: GoogleFonts.inter(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13),
+                    )),
+                  ],
+                ),
               ),
-            )
+            ),
           ],
         ),
       ],
     );
-
   }
 }
