@@ -13,8 +13,9 @@ class ProfileListView {
         Container(
           width: 360,
           height: 80,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),border: Border.all(color: Color(
-              0xffd5d5d5),width: 1.5)),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(color: Color(0xffd5d5d5), width: 1.5)),
           child: ListTile(
               leading: image,
               title: Text(
@@ -26,11 +27,12 @@ class ProfileListView {
                 ),
               ),
               subtitle: Text(
-                subtitle,style: GoogleFonts.inter(
-                fontSize: 13,
-                fontWeight: FontWeight.w500,
-                color: Colors.grey,
-              ), //
+                subtitle,
+                style: GoogleFonts.inter(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
+                ), //
               ), // Added subtitle
               trailing: Text(
                 trailing,
