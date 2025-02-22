@@ -181,6 +181,10 @@ class ProfileRowPage extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(height: height*0.09),
+        Image.asset("assets/Group 6.png"),
+        SizedBox(height: height*0.025),
+
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -203,7 +207,6 @@ class ProfileRowPage extends StatelessWidget {
             ),
           ],
         ),
-        ProfileListView.customListView(image: Image.asset(""), subtitle: "Received 29 minutes ago", title: "Chris Hemsworth", trailing: "+77.88")
       ],
     );
   }

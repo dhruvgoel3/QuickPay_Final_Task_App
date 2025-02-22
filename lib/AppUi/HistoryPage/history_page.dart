@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quickpay_final_task/AppUi/HistoryPage/netflix_ontap.dart';
+import 'package:quickpay_final_task/AppUi/HistoryPage/history_listview.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({super.key});

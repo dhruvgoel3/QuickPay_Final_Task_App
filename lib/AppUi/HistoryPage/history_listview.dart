@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quickpay_final_task/AppUi/HistoryPage/OnTap_Netflix_Page/netflix_page.dart';
 
 class NetflixOntap extends StatelessWidget {
   const NetflixOntap({super.key});
@@ -9,6 +12,7 @@ class NetflixOntap extends StatelessWidget {
     return Column(
       children: [
         ListTile(
+          onTap: (){Get.to(()=>NetflixPage());},
           leading: Image.asset("assets/netflix 1.png"),
           title: Text(
             "Netflix",
