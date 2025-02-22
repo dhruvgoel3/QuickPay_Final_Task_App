@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quickpay_final_task/AppUi/ProfilePage/listview_page.dart';
 
 class ProfileRowPage extends StatelessWidget {
   const ProfileRowPage({super.key});
@@ -82,7 +83,7 @@ class ProfileRowPage extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     fontSize: 14.5),
               ),
-              SizedBox(height: height * 0.003),
+              SizedBox(height: height * 0.005),
               Text(
                 "#80,0098.09",
                 style: GoogleFonts.inter(
@@ -93,7 +94,7 @@ class ProfileRowPage extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: height * 0.02),
+        SizedBox(height: height * 0.028),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -180,6 +181,29 @@ class ProfileRowPage extends StatelessWidget {
             ),
           ],
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(
+              "Recent Transactions",
+              style: GoogleFonts.inter(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 21),
+            ),
+            SizedBox(
+              width: width * 0.1,
+            ),
+            Text(
+              "See all",
+              style: GoogleFonts.inter(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18),
+            ),
+          ],
+        ),
+        ProfileListView.customListView(image: Image.asset(""), subtitle: "Received 29 minutes ago", title: "Chris Hemsworth", trailing: "+77.88")
       ],
     );
   }

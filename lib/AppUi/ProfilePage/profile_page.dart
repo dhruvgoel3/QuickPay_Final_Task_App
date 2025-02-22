@@ -19,6 +19,7 @@ class _ProfilePageState extends State<ProfilePage> {
       body: Column(
           children: [
             ProfileRowPage(),
+
           ]
       ),
     );
