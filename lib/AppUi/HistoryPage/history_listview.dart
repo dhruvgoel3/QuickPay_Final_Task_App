@@ -12,7 +12,9 @@ class NetflixOntap extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          onTap: (){Get.to(()=>NetflixPage());},
+          onTap: () {
+            Get.to(() => NetflixPage());
+          },
           leading: Image.asset("assets/netflix 1.png"),
           title: Text(
             "Netflix",
