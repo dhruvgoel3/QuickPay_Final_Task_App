@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quickpay_final_task/AppUi/HomePage/main_cards.dart';
 import 'package:quickpay_final_task/Widgets/home_page_cards.dart';
@@ -17,6 +19,19 @@ class _HomePageState extends State<HomePage> {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
+      floatingActionButton: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 60.0),
+            child: Divider(color: Colors.black,thickness: 2,),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 170.0,top: 35),
+            child: CircleAvatar(radius: 30,),
+          ),
+        ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       body: Column(
         children: [
           Row(
@@ -31,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Text(
-                      "Hello DG",
+                      "Dhruv",
                       style: GoogleFonts.inter(
                           color: Colors.black,
                           fontWeight: FontWeight.w600,

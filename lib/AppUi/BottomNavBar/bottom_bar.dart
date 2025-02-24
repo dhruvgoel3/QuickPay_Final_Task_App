@@ -64,7 +64,9 @@ class _BottomBarState extends State<BottomBar> {
                     height: 25,
                   ),
                   label: "Profile"),
-            ]),
+            ],
+        ),
+
       ),
       body: IndexedStack(
         children: pages,

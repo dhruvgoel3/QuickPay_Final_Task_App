@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:quickpay_final_task/Login/login_Page.dart';
 import 'package:quickpay_final_task/SignUp/textfields_page.dart';
 
+import '../AppUi/HomePage/home_page.dart';
 import '../Widgets/textfields.dart';
 
 class SignupPage extends StatefulWidget {
@@ -87,7 +88,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
             InkWell(
               onTap: () {
-                Get.to(Placeholder());
+                Get.to(HomePage());
               },
               child: Container(
                 height: height * 0.067,
