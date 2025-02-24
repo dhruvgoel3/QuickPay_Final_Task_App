@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -7,6 +8,7 @@ import 'package:quickpay_final_task/SignUp/textfields_page.dart';
 
 import '../AppUi/HomePage/home_page.dart';
 import '../Widgets/textfields.dart';
+import '../utils.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -16,6 +18,22 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final _auth = FirebaseAuth.instance;
+  void login() {
+    _auth
+        .signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text.toString())
+        .then((value) {
+      Utils().toastMessage(value.user!.email.toString());
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomePage()));
+    }).onError((error, stackTrace) {
+      Utils().toastMessage(error.toString());
+    });
+  }
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -88,7 +106,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
             InkWell(
               onTap: () {
-                Get.to(HomePage());
+                login();
               },
               child: Container(
                 height: height * 0.067,
@@ -132,8 +150,11 @@ class _SignupPageState extends State<SignupPage> {
             SizedBox(
               height: 10,
             ),
-            Image.asset(
-                "assets/WhatsApp_Image_2025-02-02_at_00.13.42-removebg-preview 1.png"),
+            InkWell(
+              onTap: (){},
+              child: Image.asset(
+                  "assets/WhatsApp_Image_2025-02-02_at_00.13.42-removebg-preview 1.png"),
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 65.0),
               child: Row(

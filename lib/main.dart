@@ -5,6 +5,7 @@ import 'package:quickpay_final_task/OnBoarding/onboarding_page.dart';
 
 import 'firebase_options.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -23,8 +24,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(),
+      theme: ThemeData(
+      ),
       home: OnboardingPage(),
     );
   }
 }
+

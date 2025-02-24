@@ -1,12 +1,25 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:quickpay_final_task/AppUi/HomePage/home_page.dart';
 
+import '../Firebase Services/google_auth.dart';
 import '../Widgets/textfields.dart';
-class TextfieldsPage extends StatelessWidget {
+
+class TextfieldsPage extends StatefulWidget {
   const TextfieldsPage({super.key});
 
   @override
+  State<TextfieldsPage> createState() => _TextfieldsPageState();
+}
+
+class _TextfieldsPageState extends State<TextfieldsPage> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+
+  @override
   Widget build(BuildContext context) {
-    return   Padding(
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: Column(
         children: [
@@ -27,7 +40,7 @@ class TextfieldsPage extends StatelessWidget {
             height: 20,
           ),
           TextFields.CustomTextField(
-              controller: TextEditingController(),
+              controller: emailController,
               Text: "Email or Mobile number",
               tohide: false,
               icon: Icons.email_outlined),
@@ -35,7 +48,7 @@ class TextfieldsPage extends StatelessWidget {
             height: 20,
           ),
           TextFields.CustomTextField(
-              controller: TextEditingController(),
+              controller: passwordController,
               Text: "Password",
               tohide: true,
               icon: Icons.lock_outlined),
