@@ -40,7 +40,7 @@ class _CardsPageState extends State<CardsPage> {
       ),
       body: Column(
         children: [
-          SizedBox(height: 15),
+          SizedBox(height: 5),
           Row(
             children: [
               Padding(
@@ -64,13 +64,33 @@ class _CardsPageState extends State<CardsPage> {
                   ),
                 ),
               ),
-              SizedBox(width: width*0.69,),
+              SizedBox(
+                width: width * 0.69,
+              ),
               Icon(
                 CupertinoIcons.back,
                 color: Colors.black,
               ),
             ],
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Column(
+              children: [
+                Image.asset(
+                  "assets/Component 7.png",
+                  height: 190,
+                ),
+                SizedBox(height: 8),
+                Image.asset("assets/Component 5.png", height: 190),
+                SizedBox(height: 8),
+                Image.asset("assets/Component 6.png", height: 190),
+              ],
+            ),
+          ),
         ],
       ),
     );

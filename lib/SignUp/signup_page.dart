@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quickpay_final_task/AppUi/BottomNavBar/bottom_bar.dart';
 import 'package:quickpay_final_task/Login/login_Page.dart';
 import 'package:quickpay_final_task/SignUp/textfields_page.dart';
 
@@ -21,6 +22,8 @@ class _SignupPageState extends State<SignupPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final _auth = FirebaseAuth.instance;
+
+  get googleSignInDevices => null;
   void login() {
     _auth
         .signInWithEmailAndPassword(
@@ -29,7 +32,7 @@ class _SignupPageState extends State<SignupPage> {
         .then((value) {
       Utils().toastMessage(value.user!.email.toString());
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
+          context, MaterialPageRoute(builder: (context) => BottomBar()));
     }).onError((error, stackTrace) {
       Utils().toastMessage(error.toString());
     });
@@ -106,7 +109,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
             InkWell(
               onTap: () {
-                login();
+               Get.to(()=>BottomBar());
               },
               child: Container(
                 height: height * 0.067,
@@ -151,7 +154,22 @@ class _SignupPageState extends State<SignupPage> {
               height: 10,
             ),
             InkWell(
-              onTap: (){},
+              onTap: ()  async {
+            final User = await googleSignInDevices.signUpwithGmail();
+
+            if (User != null) {
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) => BottomBar()));
+            Get.snackbar(
+            "",
+            backgroundColor: Colors.lightBlue,
+            titleText: Text("Sign in sucessfull"),
+            'Signed in as ${User.displayName}',
+            );
+            } else {
+            Get.snackbar('Error', 'SignIn is failed');
+            }
+            },
               child: Image.asset(
                   "assets/WhatsApp_Image_2025-02-02_at_00.13.42-removebg-preview 1.png"),
             ),

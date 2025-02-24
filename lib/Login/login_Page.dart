@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -6,10 +7,32 @@ import 'package:quickpay_final_task/AppUi/BottomNavBar/bottom_bar.dart';
 import 'package:quickpay_final_task/Widgets/textfields_login_page.dart';
 
 import '../Widgets/textfields.dart';
+import '../utils.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final _auth = FirebaseAuth.instance;
+  void login() {
+    _auth
+        .signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text.toString())
+        .then((value) {
+      Utils().toastMessage(value.user!.email.toString());
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => BottomBar()));
+    }).onError((error, stackTrace) {
+      Utils().toastMessage(error.toString());
+    });
+  }
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -38,7 +61,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 children: [
                   TextFieldsTwo.CustomTextField(
-                      controller: TextEditingController(),
+                      controller: emailController,
                       Text: "Email or Password",
                       tohide: false,
                       icon: Icons.email_outlined,
@@ -46,7 +69,7 @@ class LoginPage extends StatelessWidget {
                           "assets/WhatsApp_Image_2025-02-18_at_14.19.22-removebg-preview 3.png")),
                   SizedBox(height: 20),
                   TextFieldsTwo.CustomTextField(
-                    controller: TextEditingController(),
+                    controller: passwordController,
                     Text: "Email or Password",
                     tohide: false,
                     icon: Icons.email_outlined,
