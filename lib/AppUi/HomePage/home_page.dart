@@ -19,19 +19,6 @@ class _HomePageState extends State<HomePage> {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 60.0),
-            child: Divider(color: Colors.black,thickness: 2,),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 170.0,top: 35),
-            child: CircleAvatar(radius: 30,),
-          ),
-        ],
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       body: Column(
         children: [
           Row(
@@ -66,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                 width: width * 0.2,
               ),
               Padding(
-                padding: EdgeInsets.only(top: height * 0.08),
+                padding: EdgeInsets.only(top: height * 0.08,left: 10),
                 child: Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,

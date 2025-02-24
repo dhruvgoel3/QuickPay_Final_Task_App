@@ -38,6 +38,7 @@ class Cards {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
                   padding:
@@ -53,18 +54,21 @@ class Cards {
                 SizedBox(
                   width: 20,
                 ),
-                Container(
-                  height: 22,
-                  width: 60,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.black),
-                  child: Center(
-                      child: Text("View All",
-                          style: GoogleFonts.inter(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 12))),
+                Padding(
+                  padding: const EdgeInsets.only(right: 15.0),
+                  child: Container(
+                    height: 22,
+                    width: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.black),
+                    child: Center(
+                        child: Text("View All",
+                            style: GoogleFonts.inter(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12))),
+                  ),
                 ),
               ],
             ),

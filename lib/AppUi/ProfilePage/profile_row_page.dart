@@ -181,10 +181,9 @@ class ProfileRowPage extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: height*0.09),
+        SizedBox(height: height * 0.06),
         Image.asset("assets/Group 6.png"),
-        SizedBox(height: height*0.025),
-
+        SizedBox(height: height * 0.035),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
