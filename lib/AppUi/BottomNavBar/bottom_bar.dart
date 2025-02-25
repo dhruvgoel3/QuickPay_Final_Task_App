@@ -35,7 +35,7 @@ class _BottomBarState extends State<BottomBar> {
               padding: const EdgeInsets.only(top: 60.0, left: 20),
               child: Divider(
                 color: Colors.black,
-                thickness: 2,
+                thickness: 1,
               ),
             ),
             Padding(
@@ -44,13 +44,14 @@ class _BottomBarState extends State<BottomBar> {
                 radius: 30,
                 backgroundColor: Colors.black,
                 child: InkWell(
-                  onTap: (){
-                    Get.to(()=>ScannerPage());
-                  },
+                    onTap: () {
+                      Get.to(() => ScannerPage());
+                    },
                     child: Image.asset(
-                  "assets/scanner 4.png",height: 26,
-                  color: Colors.white,
-                )),
+                      "assets/scanner 4.png",
+                      height: 26,
+                      color: Colors.white,
+                    )),
               ),
             ),
           ],
@@ -74,32 +75,37 @@ class _BottomBarState extends State<BottomBar> {
             _pageController.jumpToPage(index);
           },
           items: [
-
             BottomNavigationBarItem(
                 icon: Image.asset(
                   "assets/home (1) 2.png",
                   height: 25,
                 ),
-                label: "Home"),
+                label: ""),
             BottomNavigationBarItem(
-                icon: Image.asset(
-                  "assets/history (1) 2.png",
-                  height: 25,
+                icon: Padding(
+                  padding: const EdgeInsets.only(right: 30),
+                  child: Image.asset(
+                    "assets/history (1) 2.png",
+                    height: 25,
+                  ),
                 ),
-                label: "History"),
+                label: ""),
             // BottomNavigationBarItem(icon: SizedBox.shrink(),label: ""),
             BottomNavigationBarItem(
-                icon: Image.asset(
-                  "assets/credit-card 2.png",
-                  height: 25,
+                icon: Padding(
+                  padding: const EdgeInsets.only(left: 30.0),
+                  child: Image.asset(
+                    "assets/credit-card 2.png",
+                    height: 25,
+                  ),
                 ),
-                label: "Cards"),
+                label: "dk"),
             BottomNavigationBarItem(
                 icon: Image.asset(
                   "assets/user 2.png",
                   height: 25,
                 ),
-                label: "Profile"),
+                label: ""),
           ],
         ),
       ),
