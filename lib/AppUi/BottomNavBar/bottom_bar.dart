@@ -5,7 +5,7 @@ import 'package:quickpay_final_task/AppUi/CardPage/cards_page.dart';
 import 'package:quickpay_final_task/AppUi/HistoryPage/history_page.dart';
 import 'package:quickpay_final_task/AppUi/HomePage/home_page.dart';
 import 'package:quickpay_final_task/AppUi/ProfilePage/profile_page.dart';
-import 'package:quickpay_final_task/AppUi/scanner_page.dart';
+import 'package:quickpay_final_task/scanner%20feature/scanner_page.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -47,10 +47,13 @@ class _BottomBarState extends State<BottomBar> {
                     onTap: () {
                       Get.to(() => ScannerPage());
                     },
-                    child: Image.asset(
-                      "assets/scanner 4.png",
-                      height: 26,
-                      color: Colors.white,
+                    child: InkWell(
+                      onTap: (){Get.to(()=>ScannerPage());},
+                      child: Image.asset(
+                        "assets/scanner 4.png",
+                        height: 26,
+                        color: Colors.white,
+                      ),
                     )),
               ),
             ),
@@ -99,7 +102,7 @@ class _BottomBarState extends State<BottomBar> {
                     height: 25,
                   ),
                 ),
-                label: "dk"),
+                label: ""),
             BottomNavigationBarItem(
                 icon: Image.asset(
                   "assets/user 2.png",
