@@ -85,7 +85,7 @@ class ProfileRowPage extends StatelessWidget {
               ),
               SizedBox(height: height * 0.005),
               Text(
-                "#80,0098.09",
+                "\$80,0098.09",
                 style: GoogleFonts.inter(
                     color: Colors.black,
                     fontWeight: FontWeight.w700,

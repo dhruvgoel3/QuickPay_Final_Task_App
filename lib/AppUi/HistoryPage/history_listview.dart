@@ -22,7 +22,7 @@ class NetflixOntap extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
           ),
           trailing: Text(
-            "#17.99",
+            "\$17.99",
             style: GoogleFonts.inter(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 16),
           ),
@@ -45,7 +45,7 @@ class NetflixOntap extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
           ),
           trailing: Text(
-            "#14.90",
+            "\$14.90",
             style: GoogleFonts.inter(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 16),
           ),
@@ -68,7 +68,7 @@ class NetflixOntap extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
           ),
           trailing: Text(
-            "#52.70",
+            "\$52.70",
             style: GoogleFonts.inter(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 16),
           ),
@@ -93,7 +93,7 @@ class NetflixOntap extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
           ),
           trailing: Text(
-            "#17.99",
+            "\$17.99",
             style: GoogleFonts.inter(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 16),
           ),
@@ -116,7 +116,7 @@ class NetflixOntap extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
           ),
           trailing: Text(
-            "#17.99",
+            "\$17.99",
             style: GoogleFonts.inter(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 16),
           ),
@@ -139,7 +139,7 @@ class NetflixOntap extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.w500, fontSize: 15),
           ),
           trailing: Text(
-            "#10",
+            "\$10",
             style: GoogleFonts.inter(
                 color: Colors.black, fontWeight: FontWeight.w700, fontSize: 16),
           ),

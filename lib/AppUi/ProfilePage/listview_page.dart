@@ -37,8 +37,8 @@ class ProfileListView {
               trailing: Text(
                 trailing,
                 style: GoogleFonts.inter(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
                   color: Colors.green,
                 ), // Added trailing widget
               )),
