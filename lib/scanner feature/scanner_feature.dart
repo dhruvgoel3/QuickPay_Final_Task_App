@@ -47,3 +47,4 @@ class _ScannerFeatureState extends State<ScannerFeature> {
     );
   }
 }
+// done
