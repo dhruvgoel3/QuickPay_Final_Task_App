@@ -31,7 +31,7 @@ class _ScannerPageState extends State<ScannerPage> {
                   child: Padding(
                 padding: const EdgeInsets.only(top: 250, right: 5),
                 child: InkWell(
-                  onTap: (){Get.to(()=>ScannerFeature());},
+                  // onTap: (){Get.to(()=>ScannerFeature());},
                   child: Image.asset(
                     "assets/Frame 4.png",
                     height: 250,
