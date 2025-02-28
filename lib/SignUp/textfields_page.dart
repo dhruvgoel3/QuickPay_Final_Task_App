@@ -15,7 +15,8 @@ class TextfieldsPage extends StatefulWidget {
 class _TextfieldsPageState extends State<TextfieldsPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-
+  final firstNameController = TextEditingController();
+  final lastNameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,34 +25,40 @@ class _TextfieldsPageState extends State<TextfieldsPage> {
       child: Column(
         children: [
           TextFields.CustomTextField(
-              controller: TextEditingController(),
-              Text: "First Name",
-              tohide: false,
-              icon: Icons.perm_identity),
-          SizedBox(
-            height: 20,
+            controller: firstNameController,
+            hintText: "First Name",
+            regexPattern: r"^[a-zA-Z]{2,}$", // Only alphabets, min 2 chars
+            errorMessage: "Enter a valid first name",
+            tohide: false,
+            icon: Icons.perm_identity,
           ),
+          SizedBox(height: 20),
           TextFields.CustomTextField(
-              controller: TextEditingController(),
-              Text: "Last Name",
-              tohide: false,
-              icon: Icons.perm_identity),
-          SizedBox(
-            height: 20,
+            controller: lastNameController,
+            hintText: "Last Name",
+            regexPattern: r"^[a-zA-Z]{2,}$", // Only alphabets, min 2 chars
+            errorMessage: "Enter a valid last name",
+            tohide: false,
+            icon: Icons.perm_identity,
           ),
+          SizedBox(height: 20),
           TextFields.CustomTextField(
-              controller: emailController,
-              Text: "Email or Mobile number",
-              tohide: false,
-              icon: Icons.email_outlined),
-          SizedBox(
-            height: 20,
+            controller: emailController,
+            hintText: "Email or Mobile number",
+            regexPattern: r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', // Email validation
+            errorMessage: "Enter a valid email",
+            tohide: false,
+            icon: Icons.email_outlined,
           ),
+          SizedBox(height: 20),
           TextFields.CustomTextField(
-              controller: passwordController,
-              Text: "Password",
-              tohide: true,
-              icon: Icons.lock_outlined),
+            controller: passwordController,
+            hintText: "Password",
+            regexPattern: r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$', // At least 6 chars, 1 letter, 1 number
+            errorMessage: "Password must be at least 6 chars and include a number",
+            tohide: true,
+            icon: Icons.lock_outlined,
+          ),
         ],
       ),
     );
