@@ -27,8 +27,8 @@ class _SignupPageState extends State<SignupPage> {
   void login() {
     _auth
         .signInWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text.toString())
+            email: emailController.text,
+            password: passwordController.text.toString())
         .then((value) {
       Utils().toastMessage(value.user!.email.toString());
       Navigator.push(
@@ -37,6 +37,7 @@ class _SignupPageState extends State<SignupPage> {
       Utils().toastMessage(error.toString());
     });
   }
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -109,7 +110,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
             InkWell(
               onTap: () {
-               Get.to(()=>BottomBar());
+                Get.to(() => BottomBar());
               },
               child: Container(
                 height: height * 0.067,
@@ -154,24 +155,27 @@ class _SignupPageState extends State<SignupPage> {
               height: 10,
             ),
             InkWell(
-              onTap: ()  async {
-            final User = await googleSignInDevices.signUpwithGmail();
 
-            if (User != null) {
-            Navigator.push(context,
-            MaterialPageRoute(builder: (context) => BottomBar()));
-            Get.snackbar(
-            "",
-            backgroundColor: Colors.lightBlue,
-            titleText: Text("Sign in sucessfull"),
-            'Signed in as ${User.displayName}',
-            );
-            } else {
-            Get.snackbar('Error', 'SignIn is failed');
-            }
-            },
-              child: Image.asset(
-                  "assets/WhatsApp_Image_2025-02-02_at_00.13.42-removebg-preview 1.png"),
+              child: InkWell(
+                onTap: () async {
+                  final User = await googleSignInDevices.signUpwithGmail();
+
+                  if (User != null) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => BottomBar()));
+                    Get.snackbar(
+                      "",
+                      backgroundColor: Colors.lightBlue,
+                      titleText: Text("Sign in sucessfull"),
+                      'Signed in as ${User.displayName}',
+                    );
+                  } else {
+                    Get.snackbar('Error', 'SignIn is failed');
+                  }
+                },
+                child: Image.asset(
+                    "assets/WhatsApp_Image_2025-02-02_at_00.13.42-removebg-preview 1.png"),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 65.0),
